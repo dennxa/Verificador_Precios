@@ -18,12 +18,14 @@ namespace Verificador_Precios
         private void Form1_Load(object sender, EventArgs e)
         {
             logoTienda.Location = new Point(this.Width / 2 - logoTienda.Width / 2, 20);
-            bienvenida.Location = new Point(this.Width / 2 - bienvenida.Width / 2, logoTienda.Height + 30);
-            escaner.Location = new Point(this.Width/2 - escaner.Width/2,this.Height/2);
+            bienvenida.Location = new Point(this.Width / 2 - bienvenida.Width / 2, logoTienda.Height + 60);
+            escaner.Location = new Point(this.Width/2 - escaner.Width/2, bienvenida.Height + 280);
+            flechitas.Location = new Point(this.Width / 2 - flechitas.Width / 2, escaner.Height + 350);
             nombreProducto.Visible = false;
             productoImg.Visible = false;
             precioProducto.Visible = false;
             cantidadProducto.Visible = false;
+            fondoImg.Visible = false;
             
         }
 
@@ -50,10 +52,28 @@ namespace Verificador_Precios
                         nombreProducto.Visible = true;
                         escaner.Visible=false;
                         productoImg.Visible = true;
-                        nombreProducto.Text = resultado.GetString(0)+Environment.NewLine+"Precio:"+resultado.GetString(1) +
-                            Environment.NewLine + "Stock:" + resultado.GetString(2);
+                        bienvenida.Visible = false;
+                        flechitas.Visible = false;
+                        precioProducto.Visible = true;
+                        cantidadProducto.Visible = true;
+                        fondoImg.Visible = true;
+                        
+                        logoTienda.Location = new Point(this.Width - 250, 20);
+                        
+                        nombreProducto.Location = new Point(30,logoTienda.Height/2);
+                        nombreProducto.Text = resultado.GetString(0);
+                        
+                        fondoImg.Location = new Point(30, logoTienda.Height+100);
                         productoImg.ImageLocation = resultado.GetString(3);
                         productoImg.SizeMode = PictureBoxSizeMode.StretchImage;
+                        productoImg.Location = new Point(fondoImg.Width/2-productoImg.Width/2+30,320 );
+
+                        precioProducto.Location = new Point(this.Width/2-20, fondoImg.Height+precioProducto.Height);
+                        precioProducto.Text = "Precio: $" + resultado.GetString(1) + " pesos";
+
+                        cantidadProducto.Location = new Point(this.Width / 2 - 20, fondoImg.Height + fondoImg.Height-cantidadProducto.Height);
+                        cantidadProducto.Text = "Disponibles: " + resultado.GetString(2);
+                        
 
                         segundos = 0;
                         timer1.Enabled = true;
@@ -81,9 +101,16 @@ namespace Verificador_Precios
 
             if (segundos == 4)
             {
+                logoTienda.Location = new Point(this.Width / 2 - logoTienda.Width / 2, 20);
                 timer1.Enabled = false;
                 escaner.Visible = true;
                 productoImg.Visible = false;
+                logoTienda.Visible = true;
+                bienvenida.Visible = true;
+                flechitas.Visible = true;
+                precioProducto.Visible = false;
+                cantidadProducto.Visible = false;
+                fondoImg.Visible = false;
                 nombreProducto.Text = "";
             }
 		}

@@ -40,10 +40,14 @@ namespace Verificador_Precios
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.precioProducto = new System.Windows.Forms.Label();
             this.cantidadProducto = new System.Windows.Forms.Label();
+            this.flechitas = new System.Windows.Forms.PictureBox();
+            this.fondoImg = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoTienda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escaner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fondoImg)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -58,7 +62,7 @@ namespace Verificador_Precios
             this.logoTienda.Location = new System.Drawing.Point(395, 14);
             this.logoTienda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.logoTienda.Name = "logoTienda";
-            this.logoTienda.Size = new System.Drawing.Size(398, 231);
+            this.logoTienda.Size = new System.Drawing.Size(299, 299);
             this.logoTienda.TabIndex = 0;
             this.logoTienda.TabStop = false;
             // 
@@ -90,20 +94,21 @@ namespace Verificador_Precios
             // nombreProducto
             // 
             this.nombreProducto.AutoSize = true;
-            this.nombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreProducto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.nombreProducto.Location = new System.Drawing.Point(279, 478);
             this.nombreProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nombreProducto.Name = "nombreProducto";
-            this.nombreProducto.Size = new System.Drawing.Size(145, 52);
+            this.nombreProducto.Size = new System.Drawing.Size(605, 82);
             this.nombreProducto.TabIndex = 3;
-            this.nombreProducto.Text = "label2";
+            this.nombreProducto.Text = "Nombre producto";
             this.nombreProducto.Visible = false;
             // 
             // productoImg
             // 
-            this.productoImg.Location = new System.Drawing.Point(856, 378);
+            this.productoImg.Location = new System.Drawing.Point(373, 148);
             this.productoImg.Name = "productoImg";
-            this.productoImg.Size = new System.Drawing.Size(244, 223);
+            this.productoImg.Size = new System.Drawing.Size(340, 308);
             this.productoImg.TabIndex = 4;
             this.productoImg.TabStop = false;
             // 
@@ -115,20 +120,44 @@ namespace Verificador_Precios
             // precioProducto
             // 
             this.precioProducto.AutoSize = true;
-            this.precioProducto.Location = new System.Drawing.Point(284, 581);
+            this.precioProducto.Font = new System.Drawing.Font("BIZ UDPGothic", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioProducto.Location = new System.Drawing.Point(88, 535);
             this.precioProducto.Name = "precioProducto";
-            this.precioProducto.Size = new System.Drawing.Size(51, 20);
+            this.precioProducto.Size = new System.Drawing.Size(283, 72);
             this.precioProducto.TabIndex = 5;
-            this.precioProducto.Text = "label3";
+            this.precioProducto.Text = "Precio";
             // 
             // cantidadProducto
             // 
             this.cantidadProducto.AutoSize = true;
+            this.cantidadProducto.Font = new System.Drawing.Font("BIZ UDPGothic", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantidadProducto.Location = new System.Drawing.Point(334, 617);
             this.cantidadProducto.Name = "cantidadProducto";
-            this.cantidadProducto.Size = new System.Drawing.Size(51, 20);
+            this.cantidadProducto.Size = new System.Drawing.Size(379, 72);
             this.cantidadProducto.TabIndex = 6;
-            this.cantidadProducto.Text = "label4";
+            this.cantidadProducto.Text = "cantidad";
+            // 
+            // flechitas
+            // 
+            this.flechitas.BackColor = System.Drawing.Color.Transparent;
+            this.flechitas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flechitas.BackgroundImage")));
+            this.flechitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.flechitas.Location = new System.Drawing.Point(878, 148);
+            this.flechitas.Name = "flechitas";
+            this.flechitas.Size = new System.Drawing.Size(272, 117);
+            this.flechitas.TabIndex = 7;
+            this.flechitas.TabStop = false;
+            // 
+            // fondoImg
+            // 
+            this.fondoImg.BackColor = System.Drawing.Color.Transparent;
+            this.fondoImg.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fondoImg.BackgroundImage")));
+            this.fondoImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fondoImg.Location = new System.Drawing.Point(184, 109);
+            this.fondoImg.Name = "fondoImg";
+            this.fondoImg.Size = new System.Drawing.Size(720, 380);
+            this.fondoImg.TabIndex = 8;
+            this.fondoImg.TabStop = false;
             // 
             // Form1
             // 
@@ -136,9 +165,11 @@ namespace Verificador_Precios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.productoImg);
+            this.Controls.Add(this.fondoImg);
+            this.Controls.Add(this.flechitas);
             this.Controls.Add(this.cantidadProducto);
             this.Controls.Add(this.precioProducto);
-            this.Controls.Add(this.productoImg);
             this.Controls.Add(this.nombreProducto);
             this.Controls.Add(this.escaner);
             this.Controls.Add(this.bienvenida);
@@ -155,6 +186,8 @@ namespace Verificador_Precios
             ((System.ComponentModel.ISupportInitialize)(this.logoTienda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.escaner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fondoImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,6 +204,8 @@ namespace Verificador_Precios
 		private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label cantidadProducto;
         private System.Windows.Forms.Label precioProducto;
+        private System.Windows.Forms.PictureBox flechitas;
+        private System.Windows.Forms.PictureBox fondoImg;
     }
 }
 
