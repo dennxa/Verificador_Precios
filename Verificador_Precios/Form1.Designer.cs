@@ -42,12 +42,19 @@ namespace Verificador_Precios
             this.cantidadProducto = new System.Windows.Forms.Label();
             this.flechitas = new System.Windows.Forms.PictureBox();
             this.fondoImg = new System.Windows.Forms.PictureBox();
+            this.danger = new System.Windows.Forms.PictureBox();
+            this.back = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoTienda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escaner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danger)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -159,12 +166,79 @@ namespace Verificador_Precios
             this.fondoImg.TabIndex = 8;
             this.fondoImg.TabStop = false;
             // 
+            // danger
+            // 
+            this.danger.BackColor = System.Drawing.Color.Transparent;
+            this.danger.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("danger.BackgroundImage")));
+            this.danger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.danger.Location = new System.Drawing.Point(840, 397);
+            this.danger.Name = "danger";
+            this.danger.Size = new System.Drawing.Size(280, 240);
+            this.danger.TabIndex = 9;
+            this.danger.TabStop = false;
+            // 
+            // back
+            // 
+            this.back.AutoSize = true;
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.Location = new System.Drawing.Point(511, 201);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(1182, 82);
+            this.back.TabIndex = 10;
+            this.back.Text = "Regresando a la ventana de inicio...";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 183);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1743, 82);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Lo sentimos :( parece que hay un error en el producto";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(463, 337);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(358, 82);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "solicitado.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 453);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1821, 82);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Intentelo nuevamente y en caso de seguir acuda al area";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(500, 586);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(717, 82);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "de Servicio al cliente.";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.back);
+            this.Controls.Add(this.danger);
             this.Controls.Add(this.productoImg);
             this.Controls.Add(this.fondoImg);
             this.Controls.Add(this.flechitas);
@@ -188,6 +262,7 @@ namespace Verificador_Precios
             ((System.ComponentModel.ISupportInitialize)(this.productoImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechitas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danger)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,6 +281,12 @@ namespace Verificador_Precios
         private System.Windows.Forms.Label precioProducto;
         private System.Windows.Forms.PictureBox flechitas;
         private System.Windows.Forms.PictureBox fondoImg;
+        private System.Windows.Forms.PictureBox danger;
+        private System.Windows.Forms.Label back;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

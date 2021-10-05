@@ -26,7 +26,13 @@ namespace Verificador_Precios
             precioProducto.Visible = false;
             cantidadProducto.Visible = false;
             fondoImg.Visible = false;
-            
+            danger.Visible = false;
+            back.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+
         }
 
 
@@ -50,14 +56,22 @@ namespace Verificador_Precios
                         resultado.Read();
                         //MessageBox.Show(resultado.GetString(1));
                         nombreProducto.Visible = true;
-                        escaner.Visible=false;
-                        productoImg.Visible = true;
-                        bienvenida.Visible = false;
-                        flechitas.Visible = false;
                         precioProducto.Visible = true;
                         cantidadProducto.Visible = true;
                         fondoImg.Visible = true;
-                        
+                        productoImg.Visible = true;
+
+                        escaner.Visible = false;
+                        bienvenida.Visible = false;
+                        flechitas.Visible = false;
+                        danger.Visible = false;
+                        back.Visible = false;
+                        label1.Visible = false;
+                        label2.Visible = false;
+                        label3.Visible = false;
+                        label4.Visible = false;
+
+
                         logoTienda.Location = new Point(this.Width - 250, 20);
                         
                         nombreProducto.Location = new Point(30,logoTienda.Height/2);
@@ -80,7 +94,40 @@ namespace Verificador_Precios
                     }
                     else
                     {
-                        MessageBox.Show("Llame al supervisor, el producto no fue encontrado");
+                        //MessageBox.Show("Llame al supervisor, el producto no fue encontrado");
+
+                        escaner.Visible = false;
+                        bienvenida.Visible = false;
+                        flechitas.Visible = false;
+                        nombreProducto.Visible = false;
+                        precioProducto.Visible = false;
+                        cantidadProducto.Visible = false;
+                        fondoImg.Visible = false;
+                        productoImg.Visible = false;
+
+                        logoTienda.Visible = true;
+                        logoTienda.Location = new Point(this.Width / 2 - logoTienda.Width / 2, 20);
+
+                        danger.Visible = true;
+                        danger.Location = new Point(this.Width / 2 - danger.Width / 2, this.Height-danger.Height-back.Height-40);
+                        
+                        back.Visible = true;
+                        back.Location = new Point(this.Width-back.Width, this.Height - 100);
+
+                        label1.Visible = true;
+                        label1.Location = new Point(this.Width/2 - label1.Width/2, logoTienda.Height+40);
+
+                        label2.Visible = true;
+                        label2.Location = new Point(this.Width / 2 - label2.Width / 2, logoTienda.Height + label1.Height+40);
+
+                        label3.Visible = true;
+                        label3.Location = new Point(this.Width / 2 - label3.Width / 2, logoTienda.Height + label1.Height + label2.Height+40);
+
+                        label4.Visible = true;
+                        label4.Location = new Point(this.Width / 2 - label4.Width / 2, logoTienda.Height + label3.Height + label2.Height +label3.Height+ 40);
+
+                        segundos = 0;
+                        timer1.Enabled = true;
                     }
                 }
                 catch (Exception x)
@@ -112,6 +159,13 @@ namespace Verificador_Precios
                 cantidadProducto.Visible = false;
                 fondoImg.Visible = false;
                 nombreProducto.Text = "";
+                
+                back.Visible = false;
+                danger.Visible = false;
+                label1.Visible = false;
+                label2.Visible = false;
+                label3.Visible = false;
+                label4.Visible = false;
             }
 		}
 
